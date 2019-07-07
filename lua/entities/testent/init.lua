@@ -27,3 +27,12 @@ function ENT:Use(activator,caller)
 		caller:Kill()
 	end
 end
+
+function ENT:Touch(entity)
+	if entity:GetClass()=="player" then
+		print("i was touched by "..entity:Nick())
+	else
+		print("i was touched by "..entity:GetClass())
+	end
+
+end
