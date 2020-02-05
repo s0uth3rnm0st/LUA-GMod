@@ -4,6 +4,8 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
+local interval = 1
+
 function ENT:Initialize()
 //this function will be called whenever the entity
 //is firstly created
@@ -13,6 +15,8 @@ function ENT:Initialize()
 	self:SetSolid(SOLID_VPHYSICS)
 	self:SetColor(Color(100,1,1))
 
+	self.timer = CurTime()
+
 	local phys = self:GetPhysicsObject()
 
 	if phys:IsValid() then
@@ -20,6 +24,13 @@ function ENT:Initialize()
 	end
 end 
 
-function ENT:Use(c, a)
-	c.SetColor(1,1)
+function ENT:Think()
+	
+	if CurTime() > self.timer + interval then
+		
+		self.timer = CurTime()
+		self:SetMoneyAmount(self:GetMoneyAmount() + 100)
+
+	end
+
 end

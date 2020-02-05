@@ -6,7 +6,7 @@ ENT.PrintName = "printer"
 
 ENT.Spawnable = true
 
-function ENT:SetUpTables()
+function ENT:SetupDataTables()
 
 	self:NetworkVar("Int", 1 , "MoneyAmount")
 	//Stores an entity on the serverside of an entity and sends it to the client,

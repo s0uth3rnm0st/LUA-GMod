@@ -3,7 +3,7 @@ include("shared.lua")
 surface.CreateFont( "MoneyFont", {
 	font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
 	extended = false,
-	size = 13,
+	size = 40,
 	weight = 500,
 	blursize = 0,
 	scanlines = 0,
