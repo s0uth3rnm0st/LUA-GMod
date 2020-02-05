@@ -7,7 +7,7 @@ include("shared.lua")
 function ENT:Initialize()
 //this function will be called whenever the entity
 //is firstly created
-	self:SetModel("models/Gibs/Antlion_gib_Large_2.mdl")
+	self:SetModel("models/props_c17/consolebox03a.mdl")
 	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetMoveType(MOVETYPE_VPHYSICS)
 	self:SetSolid(SOLID_VPHYSICS)
